@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 import random
-bot = telebot.TeleBot('5055714464:AAFAPhI4whV4ICqoYiN6xYEmP7A-RZtPi6U')
+bot = telebot.TeleBot('')
 
 #пишем основые кнопки в меню
 @bot.message_handler(commands=['start'])
