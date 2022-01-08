@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 from requests import get
 from telebot.types import ReplyKeyboardMarkup
-bot = telebot.TeleBot('5008383917:AAGW7DDYvpyVuYBPDvwLWbyfOeT9VE0uAsA')
+bot = telebot.TeleBot('5008383917:AAHw887qT_JFLtogZ7_kGW20ltrljyy3Ips')
 # пишем основые кнопки в меню
 
 
@@ -24,9 +24,9 @@ def bot_message(message):
     if message.chat.type == 'private':
         if message.text == '⏰ Расписание':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton('Расписание уроков')
-            item2 = types.KeyboardButton('Расписание звонков')
-            item3 = types.KeyboardButton('Расписание пробных экзаменов (9-11 класс)')
+            item1 = types.KeyboardButton('Уроки')
+            item2 = types.KeyboardButton('Звонки')
+            item3 = types.KeyboardButton('Пробные экзамены(9-11 класс)')
             back = types.KeyboardButton('🔙 Назад')
             markup.add(item1, item2, item3, back)
             bot.send_message(message.chat.id, 'Выберите интересующее вас расписание', reply_markup=markup)
@@ -43,9 +43,7 @@ def bot_message(message):
             bot.send_message(message.chat.id, 'Пока нет информации', reply_markup=markup)
         elif message.text == '👩‍🏫 Найти учителя':
             bot.send_message(message.chat.id,
-                             'Введите фамилию преподавателя(с заглавной буквы) и день.\n\nP.S здесь пока только не все учителя, так как это тестовый режим')
-        if message.text == 'Шапкина':
-            bot.send_message(message.chat.id, 'Расписания Марии Валентиновны на неделю пока нет')
+                             'Введите фамилию преподавателя(с заглавной буквы) и день.')
         if message.text == 'Прокопьева понедельник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -410,13 +408,13 @@ def bot_message(message):
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
-            bot.send_photo(message.chat.id, get("https://i.postimg.cc/1R2gMHFS/image.png").content)
+            bot.send_photo(message.chat.id, get("https://i.postimg.cc/q7Zmfvdg/1.png").content)
         if message.text == 'Абрамова вторник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
-            bot.send_photo(message.chat.id, get("https://i.postimg.cc/Y9j9zGqj/image.png").content)
+            bot.send_photo(message.chat.id, get("https://i.postimg.cc/zf3jkYRN/2.png").content)
         if message.text == 'Абрамова среда':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -426,19 +424,19 @@ def bot_message(message):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
-            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+            bot.send_message(message.chat.id, 'https://i.postimg.cc/nzDG6Kkw/4.png', reply_markup=markup)
         if message.text == 'Абрамова пятница':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
-            bot.send_photo(message.chat.id, get("https://i.postimg.cc/52qmF0tZ/image.png").content)
+            bot.send_photo(message.chat.id, get("https://i.postimg.cc/L88BHFDP/5.png").content)
         if message.text == 'Абрамова суббота':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
-            bot.send_photo(message.chat.id, get("https://i.postimg.cc/DzpLqb3Y/image.png").content)
+            bot.send_photo(message.chat.id, get("https://i.postimg.cc/4x2vy22S/6.png").content)
         if message.text == 'Бякина понедельник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -576,8 +574,6 @@ def bot_message(message):
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
             bot.send_photo(message.chat.id, get("https://i.postimg.cc/HWFG6StT/image.png").content)
-        if message.text == 'Гутченко':
-            bot.send_message(message.chat.id, 'Расписания пока нет')
         if message.text == 'Хлынова понедельник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -678,8 +674,216 @@ def bot_message(message):
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
             bot.send_photo(message.chat.id, get("https://i.postimg.cc/2yk1MkYB/image.png").content)
-        if message.text == 'Посохова':
-            bot.send_message(message.chat.id, 'Расписание Елены Валентиновны на неделю пока нет')
+        if message.text == 'Пухно понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Пухно вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Пухно среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Пухно четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Пухно пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Пухно суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Садыкова понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Садыкова вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Садыкова среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Садыкова четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Садыкова пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Садыкова суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Гутченко понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Гутченко вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Гутченко среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Гутченко четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Гутченко пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Гутченко суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Шапкина понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Шапкина вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Шапкина среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Шапкина четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Шапкина пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Шапкина суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Рейнгольд понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Рейнгольд вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Рейнгольд среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Рейнгольд четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Рейнгольд пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Рейнгольд суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Полищук понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Полищук вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Полищук среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Полищук четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Полищук пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Полищук суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Смирнова понедельник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Смирнова вторник':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Смирнова среда':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Смирнова четверг':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
+        if message.text == 'Смирнова пятница':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
+        if message.text == 'Смирнова суббота':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('🔙 Назад')
+            markup.add(back)
+            bot.send_message(message.chat.id, 'Учителя пока нет в базе данных', reply_markup=markup)
         if message.text == 'Ляхова понедельник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -784,8 +988,6 @@ def bot_message(message):
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
             bot.send_message(message.chat.id, 'Учителя нет в этот день', reply_markup=markup)
-        if message.text == 'Полищук':
-            bot.send_message(message.chat.id, 'Расписание Василия Владимировича на неделю пока нет')
         if message.text == 'Литвинюк понедльник':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
@@ -895,8 +1097,7 @@ def bot_message(message):
             item3 = types.KeyboardButton('💭 Прочее')
             item4 = types.KeyboardButton('👩‍🏫 Найти учителя')
             markup.add(item1, item3, item4)
-            bot.send_message(message.chat.id, 'Привет, {0.first_name}! Как дела?'.format(message.from_user),
-                             reply_markup=markup)
+            bot.send_message(message.chat.id, 'Снова привет', reply_markup=markup)
 
         elif message.text == 'Шпаргалки':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -951,7 +1152,7 @@ def bot_message(message):
             item1 = types.KeyboardButton('Огэ/Егэ')
             markup.add(item1, back)
             bot.send_message(message.chat.id, 'Выберите раздел', reply_markup=markup)
-        elif message.text == 'Огэ/Егэ':
+        elif message.text == 'ОГЭ/ЕГЭ':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
             markup.add(back)
@@ -1060,7 +1261,7 @@ def bot_message(message):
             markup.add(back)
             bot.send_message(message.chat.id, 'Пожалуйста:', reply_markup=markup)
             bot.send_photo(message.chat.id,
-                           get("").content)
+                           get("https://i.postimg.cc/DyJ0KyZk/3.jpg").content)
         elif message.text == '10-Б':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             back = types.KeyboardButton('🔙 Назад')
